@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0F1E921CA940C0003013D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F1E911CA940C0003013D4 /* main.m */; };
+		1A0F1E951CA940C0003013D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F1E941CA940C0003013D4 /* AppDelegate.m */; };
+		1A0F1E981CA940C0003013D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F1E971CA940C0003013D4 /* ViewController.m */; };
+		1A0F1E9B1CA940C0003013D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0F1E991CA940C0003013D4 /* Main.storyboard */; };
+		1A0F1E9D1CA940C0003013D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0F1E9C1CA940C0003013D4 /* Assets.xcassets */; };
+		1A0F1EA01CA940C0003013D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0F1E9E1CA940C0003013D4 /* LaunchScreen.storyboard */; };
+		1A0F1EAB1CA940C0003013D4 /* DarwinNativeRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F1EAA1CA940C0003013D4 /* DarwinNativeRouterTests.m */; };
+		1A0F1EB61CA940C0003013D4 /* DarwinNativeRouterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F1EB51CA940C0003013D4 /* DarwinNativeRouterUITests.m */; };
+		1A2D979C1CAE50AB00F033B2 /* DNRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D97971CAE50AB00F033B2 /* DNRouter.m */; };
+		1A2D979D1CAE50AB00F033B2 /* DNRouterCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D97991CAE50AB00F033B2 /* DNRouterCenter.m */; };
+		1A2D979E1CAE50AC00F033B2 /* UIViewController+DNRouterExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D979B1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.m */; };
+		869E19F5B41DFA6F6355242F /* libPods-DarwinNativeRouter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A0F1EA71CA940C0003013D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0F1E851CA940C0003013D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A0F1E8C1CA940C0003013D4;
+			remoteInfo = DarwinNativeRouter;
+		};
+		1A0F1EB21CA940C0003013D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0F1E851CA940C0003013D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A0F1E8C1CA940C0003013D4;
+			remoteInfo = DarwinNativeRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinNativeRouter.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter.release.xcconfig"; sourceTree = "<group>"; };
+		1A0F1E8D1CA940C0003013D4 /* DarwinNativeRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinNativeRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0F1E911CA940C0003013D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A0F1E931CA940C0003013D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A0F1E941CA940C0003013D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A0F1E961CA940C0003013D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A0F1E971CA940C0003013D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A0F1E9A1CA940C0003013D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A0F1E9C1CA940C0003013D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A0F1E9F1CA940C0003013D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A0F1EA11CA940C0003013D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0F1EA61CA940C0003013D4 /* DarwinNativeRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarwinNativeRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0F1EAA1CA940C0003013D4 /* DarwinNativeRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarwinNativeRouterTests.m; sourceTree = "<group>"; };
+		1A0F1EAC1CA940C0003013D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0F1EB11CA940C0003013D4 /* DarwinNativeRouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarwinNativeRouterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0F1EB51CA940C0003013D4 /* DarwinNativeRouterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarwinNativeRouterUITests.m; sourceTree = "<group>"; };
+		1A0F1EB71CA940C0003013D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A2D97951CAE50AB00F033B2 /* DarwinNativeRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarwinNativeRouter.h; sourceTree = "<group>"; };
+		1A2D97961CAE50AB00F033B2 /* DNRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNRouter.h; sourceTree = "<group>"; };
+		1A2D97971CAE50AB00F033B2 /* DNRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNRouter.m; sourceTree = "<group>"; };
+		1A2D97981CAE50AB00F033B2 /* DNRouterCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNRouterCenter.h; sourceTree = "<group>"; };
+		1A2D97991CAE50AB00F033B2 /* DNRouterCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNRouterCenter.m; sourceTree = "<group>"; };
+		1A2D979A1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DNRouterExtra.h"; sourceTree = "<group>"; };
+		1A2D979B1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DNRouterExtra.m"; sourceTree = "<group>"; };
+		394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DarwinNativeRouter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinNativeRouter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A0F1E8A1CA940C0003013D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869E19F5B41DFA6F6355242F /* libPods-DarwinNativeRouter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EA31CA940C0003013D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EAE1CA940C0003013D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA5DE1D0E515EC1B09B6F8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */,
+				0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A0F1E841CA940C0003013D4 = {
+			isa = PBXGroup;
+			children = (
+				1A0F1E8F1CA940C0003013D4 /* DarwinNativeRouter */,
+				1A0F1EA91CA940C0003013D4 /* DarwinNativeRouterTests */,
+				1A0F1EB41CA940C0003013D4 /* DarwinNativeRouterUITests */,
+				1A0F1E8E1CA940C0003013D4 /* Products */,
+				0AA5DE1D0E515EC1B09B6F8F /* Pods */,
+				A59ABBB76641CF4642AF1B61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A0F1E8E1CA940C0003013D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F1E8D1CA940C0003013D4 /* DarwinNativeRouter.app */,
+				1A0F1EA61CA940C0003013D4 /* DarwinNativeRouterTests.xctest */,
+				1A0F1EB11CA940C0003013D4 /* DarwinNativeRouterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0F1E8F1CA940C0003013D4 /* DarwinNativeRouter */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D97941CAE50AB00F033B2 /* DarwinNativeRouter */,
+				1A0F1E931CA940C0003013D4 /* AppDelegate.h */,
+				1A0F1E941CA940C0003013D4 /* AppDelegate.m */,
+				1A0F1E961CA940C0003013D4 /* ViewController.h */,
+				1A0F1E971CA940C0003013D4 /* ViewController.m */,
+				1A0F1E991CA940C0003013D4 /* Main.storyboard */,
+				1A0F1E9C1CA940C0003013D4 /* Assets.xcassets */,
+				1A0F1E9E1CA940C0003013D4 /* LaunchScreen.storyboard */,
+				1A0F1EA11CA940C0003013D4 /* Info.plist */,
+				1A0F1E901CA940C0003013D4 /* Supporting Files */,
+			);
+			path = DarwinNativeRouter;
+			sourceTree = "<group>";
+		};
+		1A0F1E901CA940C0003013D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F1E911CA940C0003013D4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A0F1EA91CA940C0003013D4 /* DarwinNativeRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F1EAA1CA940C0003013D4 /* DarwinNativeRouterTests.m */,
+				1A0F1EAC1CA940C0003013D4 /* Info.plist */,
+			);
+			path = DarwinNativeRouterTests;
+			sourceTree = "<group>";
+		};
+		1A0F1EB41CA940C0003013D4 /* DarwinNativeRouterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F1EB51CA940C0003013D4 /* DarwinNativeRouterUITests.m */,
+				1A0F1EB71CA940C0003013D4 /* Info.plist */,
+			);
+			path = DarwinNativeRouterUITests;
+			sourceTree = "<group>";
+		};
+		1A2D97941CAE50AB00F033B2 /* DarwinNativeRouter */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D97951CAE50AB00F033B2 /* DarwinNativeRouter.h */,
+				1A2D97961CAE50AB00F033B2 /* DNRouter.h */,
+				1A2D97971CAE50AB00F033B2 /* DNRouter.m */,
+				1A2D97981CAE50AB00F033B2 /* DNRouterCenter.h */,
+				1A2D97991CAE50AB00F033B2 /* DNRouterCenter.m */,
+				1A2D979A1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.h */,
+				1A2D979B1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.m */,
+			);
+			path = DarwinNativeRouter;
+			sourceTree = "<group>";
+		};
+		A59ABBB76641CF4642AF1B61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A0F1E8C1CA940C0003013D4 /* DarwinNativeRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0F1EBA1CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouter" */;
+			buildPhases = (
+				6CD783E39408EA79FF2F3BA9 /* Check Pods Manifest.lock */,
+				1A0F1E891CA940C0003013D4 /* Sources */,
+				1A0F1E8A1CA940C0003013D4 /* Frameworks */,
+				1A0F1E8B1CA940C0003013D4 /* Resources */,
+				C04D1C24CE5F9A16E3E49A0D /* Embed Pods Frameworks */,
+				61857B2F38C00A97AF46F196 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DarwinNativeRouter;
+			productName = DarwinNativeRouter;
+			productReference = 1A0F1E8D1CA940C0003013D4 /* DarwinNativeRouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A0F1EA51CA940C0003013D4 /* DarwinNativeRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0F1EBD1CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouterTests" */;
+			buildPhases = (
+				1A0F1EA21CA940C0003013D4 /* Sources */,
+				1A0F1EA31CA940C0003013D4 /* Frameworks */,
+				1A0F1EA41CA940C0003013D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A0F1EA81CA940C0003013D4 /* PBXTargetDependency */,
+			);
+			name = DarwinNativeRouterTests;
+			productName = DarwinNativeRouterTests;
+			productReference = 1A0F1EA61CA940C0003013D4 /* DarwinNativeRouterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A0F1EB01CA940C0003013D4 /* DarwinNativeRouterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0F1EC01CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouterUITests" */;
+			buildPhases = (
+				1A0F1EAD1CA940C0003013D4 /* Sources */,
+				1A0F1EAE1CA940C0003013D4 /* Frameworks */,
+				1A0F1EAF1CA940C0003013D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A0F1EB31CA940C0003013D4 /* PBXTargetDependency */,
+			);
+			name = DarwinNativeRouterUITests;
+			productName = DarwinNativeRouterUITests;
+			productReference = 1A0F1EB11CA940C0003013D4 /* DarwinNativeRouterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A0F1E851CA940C0003013D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = oenius;
+				TargetAttributes = {
+					1A0F1E8C1CA940C0003013D4 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					1A0F1EA51CA940C0003013D4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1A0F1E8C1CA940C0003013D4;
+					};
+					1A0F1EB01CA940C0003013D4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1A0F1E8C1CA940C0003013D4;
+					};
+				};
+			};
+			buildConfigurationList = 1A0F1E881CA940C0003013D4 /* Build configuration list for PBXProject "DarwinNativeRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A0F1E841CA940C0003013D4;
+			productRefGroup = 1A0F1E8E1CA940C0003013D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A0F1E8C1CA940C0003013D4 /* DarwinNativeRouter */,
+				1A0F1EA51CA940C0003013D4 /* DarwinNativeRouterTests */,
+				1A0F1EB01CA940C0003013D4 /* DarwinNativeRouterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A0F1E8B1CA940C0003013D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0F1EA01CA940C0003013D4 /* LaunchScreen.storyboard in Resources */,
+				1A0F1E9D1CA940C0003013D4 /* Assets.xcassets in Resources */,
+				1A0F1E9B1CA940C0003013D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EA41CA940C0003013D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EAF1CA940C0003013D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61857B2F38C00A97AF46F196 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CD783E39408EA79FF2F3BA9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C04D1C24CE5F9A16E3E49A0D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A0F1E891CA940C0003013D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2D979C1CAE50AB00F033B2 /* DNRouter.m in Sources */,
+				1A0F1E981CA940C0003013D4 /* ViewController.m in Sources */,
+				1A2D979E1CAE50AC00F033B2 /* UIViewController+DNRouterExtra.m in Sources */,
+				1A0F1E951CA940C0003013D4 /* AppDelegate.m in Sources */,
+				1A2D979D1CAE50AB00F033B2 /* DNRouterCenter.m in Sources */,
+				1A0F1E921CA940C0003013D4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EA21CA940C0003013D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0F1EAB1CA940C0003013D4 /* DarwinNativeRouterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0F1EAD1CA940C0003013D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0F1EB61CA940C0003013D4 /* DarwinNativeRouterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A0F1EA81CA940C0003013D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A0F1E8C1CA940C0003013D4 /* DarwinNativeRouter */;
+			targetProxy = 1A0F1EA71CA940C0003013D4 /* PBXContainerItemProxy */;
+		};
+		1A0F1EB31CA940C0003013D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A0F1E8C1CA940C0003013D4 /* DarwinNativeRouter */;
+			targetProxy = 1A0F1EB21CA940C0003013D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A0F1E991CA940C0003013D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0F1E9A1CA940C0003013D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A0F1E9E1CA940C0003013D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0F1E9F1CA940C0003013D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A0F1EB81CA940C0003013D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A0F1EB91CA940C0003013D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A0F1EBB1CA940C0003013D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DarwinNativeRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1A0F1EBC1CA940C0003013D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DarwinNativeRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1A0F1EBE1CA940C0003013D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DarwinNativeRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarwinNativeRouter.app/DarwinNativeRouter";
+			};
+			name = Debug;
+		};
+		1A0F1EBF1CA940C0003013D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DarwinNativeRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarwinNativeRouter.app/DarwinNativeRouter";
+			};
+			name = Release;
+		};
+		1A0F1EC11CA940C0003013D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DarwinNativeRouterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DarwinNativeRouter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1A0F1EC21CA940C0003013D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DarwinNativeRouterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oenius.jou.DarwinNativeRouterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DarwinNativeRouter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A0F1E881CA940C0003013D4 /* Build configuration list for PBXProject "DarwinNativeRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0F1EB81CA940C0003013D4 /* Debug */,
+				1A0F1EB91CA940C0003013D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0F1EBA1CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0F1EBB1CA940C0003013D4 /* Debug */,
+				1A0F1EBC1CA940C0003013D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0F1EBD1CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0F1EBE1CA940C0003013D4 /* Debug */,
+				1A0F1EBF1CA940C0003013D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0F1EC01CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0F1EC11CA940C0003013D4 /* Debug */,
+				1A0F1EC21CA940C0003013D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A0F1E851CA940C0003013D4 /* Project object */;
+}
