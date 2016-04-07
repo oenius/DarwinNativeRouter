@@ -221,7 +221,7 @@ Router Code
 ## 后言
 
 DarwinNativeRouter 现在还没有到1.0版本，还有很多可以想象的东西，欢迎让他更加完善，和提pr。
-[DarwinNativeRouter's Github](https://github.com/oenius/DarwinNativeDispatcher)
+[DarwinNativeRouter's Github](https://github.com/oenius/DarwinNativeRouter)
 
 
 @author Jou [Email](jou@oenius.com) [Weibo](http://weibo.com/monfur) or [Github](https://github.com/oenius)
