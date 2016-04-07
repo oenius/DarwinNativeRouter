@@ -1,3 +1,4 @@
+*PS* 感谢大家的关注，由于我本想开源4个库，分别之native dispatcher, web dispatcher 和 react dispatcher , 所以router 对native dispatcher 有了库依赖，为了共同学习，我会今晚把router，单独分离出来，再次感谢大家的关注，欢迎叫router更完善我会今晚把router，单独分离出来，再次感谢大家的关注，欢迎叫router更完善. 更新后，我会在简书上发出来。
 
 # 如何优雅的实现界面跳转 之 统跳协议 - DarwinNativeRouter
 
