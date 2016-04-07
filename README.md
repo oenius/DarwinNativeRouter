@@ -26,7 +26,9 @@ We Always Do:
 
   UIViewController *personal = [UIViewController new];
   personal.userId = @"10238372";
-  [self.navigationController pushViewController:personal animated:YES];
+  [self.navigationController pushViewController:personal animated:NO];
+  
+  // 希望大家注意下动画的设置，若animation设为YES, 容易造成animation system的混乱，需要保证最后一个push的前的所有controller的动画为NO.
 
 
 ```
