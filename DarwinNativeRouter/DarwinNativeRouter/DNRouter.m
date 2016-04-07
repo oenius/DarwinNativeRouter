@@ -112,13 +112,12 @@
     
     if(action.behavior == DNActionPopBehavior && self.navigationController)
     {
-      
       [self.navigationController popViewControllerAnimated:self.navigationController.topViewController.dn_popAnimationNeeded];
     }
     
     if(action.behavior == DNActionPopToRootBehavior && self.navigationController)
     {
-      [self.navigationController popToRootViewControllerAnimated:self.navigationController.topViewController.dn_popAnimationNeeded];
+      [self.navigationController popToRootViewControllerAnimated:NO];
     }
   }
   

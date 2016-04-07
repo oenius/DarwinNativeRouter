@@ -16,24 +16,13 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
   [super viewDidLoad];
-
-  __weak typeof(self) weakSelf = self;
-  
-
 }
 
 - (IBAction)handleClick:(id)sender
 {
-  UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
-  UIViewController *controller1 = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
-
-  UITabBarController *tabController = [[UITabBarController alloc]init];
-  
-  [tabController setViewControllers:@[controller,controller1]];
-  [self presentViewController:tabController animated:YES completion:nil];
-  
 
 }
 
@@ -49,16 +38,12 @@
 
 - (IBAction)dispatcher:(id)sender
 {
-  [self.navigationController popToRootViewControllerAnimated:NO];
-  UIViewController *personal = [UIViewController new];
-  personal.userId = @"10238372";
-  [self.navigationController pushViewController:personal animated:YES];
-    [[DNRouter router]open:@"dnr://user/10238372/profile"];
+    [[DNRouter router]open:@"/user/10238372?lalal=88&sss=999&rr=11"];
 }
 
 - (IBAction)present:(id)sender
 {
-  [[DNRouter router]open:@"/home/something"];
+  [[DNRouter router]open:@"/home/user/10238372"];
 }
 
 @end

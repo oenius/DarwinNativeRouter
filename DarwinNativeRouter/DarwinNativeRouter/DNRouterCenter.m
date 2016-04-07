@@ -6,11 +6,21 @@
 //  Copyright © 2016年 oenius. All rights reserved.
 //
 
+#define DN_REGEX_SCHEME  @"^([\\w- .]+)"
+#define DN_REGEX_SCHEME_PREFIX  @"^([\\w- .]+)(://)"
+
+#define DN_REGEX_STATIC_PATH    @"^([\\w- .]+)"
+#define DN_REGEX_DYNAMIC_PATH  @"^(/)([\\w- .]+)(/:)"
+#define DN_REGEX_DYNAMIC_VALUE_PATH @"(:[\\w- .]+)"
+
+#define DN_REGEX_DYNAMIC_VALUE_SUFFIX @"([\\w- .]+)$"
+
+#define DN_REGEX_PARAMS_SUFFIX @"(\\?[\\w- .&=]+)$"
+#define DN_REGEX_PARAMS_UNIT @"([\\w- ]+)(=)([\\w- ]+)$"
+
 #import "DNRouterCenter.h"
 
 @implementation DNAction
-
-
 @end
 
 @interface DNRouterCenter()
@@ -119,28 +129,20 @@
 
 - (NSArray *)actionsOfPath:(NSString *)path
 {
-  NSDictionary *queryItems = [self queryItemsInPath:path];
+  NSDictionary *queryItems = [self queryItemsInPath:&path];
   NSMutableArray *actions = [@[] mutableCopy];
+  
   NSRange ar = [self dn_rangeOfActionPattern:path];
   NSMutableString *mp = [path mutableCopy];
   
   NSString *scheme;
-  NSRange sr = [self dn_rangeOfSchemePattern:path scheme:&scheme];
+  mp = [self dn_removeRangeOfSchemePattern:path scheme:&scheme];
   
-  if(scheme && ![[scheme lowercaseString] isEqualToString:[self.scheme lowercaseString]]) return nil;
-  if(sr.location != NSNotFound)
-  {
-    [mp deleteCharactersInRange:sr];
-  }
+  if((scheme && ![[scheme lowercaseString] isEqualToString:[self.scheme lowercaseString]]) || !mp) return nil;
   
   //normal scheme action
-  if(ar.location == NSNotFound)
+  if(ar.length < 3)
   {
-    
-  }
-  else if(ar.length < 3)
-  {
-    
     DNAction *pop = [self dn_popActionOfRange:ar];
     
     if(pop) [actions addObject:pop];
@@ -166,7 +168,7 @@
       }
       else
       {
-          mp = [@"" mutableCopy];
+        mp = [@"" mutableCopy];
       }
     }
     
@@ -177,24 +179,33 @@
 
 - (NSString *)dn_parsePath:(NSString *)path
 {
-  NSString *pattern = @"[\\$]+";
+  //remove the last '/' characters to make uniform path
+  NSString *pattern = @"(/+)$";
   NSRange range = [path rangeOfString:pattern
                               options:NSRegularExpressionSearch];
   
   if(range.location != NSNotFound) path = [path stringByReplacingCharactersInRange:range withString:@""];
   
-  NSString *dynamic = @"(:)([^s][^/]*)";
-  NSRange dr = [path rangeOfString:dynamic
-                              options:NSRegularExpressionSearch];
-  if(dr.location != NSNotFound) path = [path stringByReplacingCharactersInRange:dr withString:@"([^s][^/]*)"];
   
+  //the dynamic path should have prior right for matching
+  NSRange dr = [path rangeOfString:DN_REGEX_DYNAMIC_PATH
+                              options:NSRegularExpressionSearch];
+  if(dr.location != NSNotFound)
+  {
+    dr = [path rangeOfString:DN_REGEX_DYNAMIC_VALUE_PATH
+                     options:NSRegularExpressionSearch];
+    path = [path stringByReplacingCharactersInRange:dr
+                                         withString:DN_REGEX_DYNAMIC_VALUE_SUFFIX];
+  }
+  
+  //return path regex should match from head
   path = [NSString stringWithFormat:@"^%@",path];
   return path;
 }
 
 - (BOOL)dn_isDynamicPattern:(NSString *)path
 {
-  if([path hasSuffix:@"(:)([^s][^/]*)"])
+  if([path hasSuffix:DN_REGEX_DYNAMIC_VALUE_SUFFIX])
   {
     return YES;
   }
@@ -210,21 +221,23 @@
 }
 
 //match scheme
-- (NSRange )dn_rangeOfSchemePattern:(NSString *)path scheme:(NSString **)scheme
+- (NSMutableString *)dn_removeRangeOfSchemePattern:(NSString *)path scheme:(NSString **)scheme
 {
-  NSString *pattern = @"(^[a-zA-z]+)(:/)";
-
-  NSRange range = [path rangeOfString:pattern
+  NSRange range = [path rangeOfString:DN_REGEX_SCHEME_PREFIX
                               options:NSRegularExpressionSearch];
+  NSMutableString *ms = [path mutableCopy];
   
   if(range.location != NSNotFound)
   {
-    *scheme = [path substringWithRange:range];
-    NSString *schemePattern = @"(^[a-zA-z]+)";
-    NSRange r = [*scheme rangeOfString:schemePattern options:NSRegularExpressionSearch];
-    if(r.location != NSNotFound) *scheme = [*scheme substringWithRange:r];
+    NSRange sr = [path rangeOfString:DN_REGEX_SCHEME
+                                options:NSRegularExpressionSearch];
+    *scheme = [path substringWithRange:sr];
+    
+    [ms deleteCharactersInRange:NSMakeRange(sr.location, sr.length + 2)];
+    return ms;
   }
-  return range;
+  
+  return ms;
 }
 
 //match ./ ../ or /
@@ -237,7 +250,6 @@
 }
 
 //match pattern
-
 - (NSRange)dn_rangeOfPattern:(NSString *)path pattern:(NSString **)pattern queryId:(NSString **)queryId
 {
   NSRange range;
@@ -245,49 +257,52 @@
   {
     range = [path rangeOfString:p
                         options:NSRegularExpressionSearch];
-    *pattern = p;
-    if([*pattern hasSuffix:@"([^s][^/]*)"] && range.location != NSNotFound)
-    {
-      NSString *p = @"(^/[^s]+/[^\\?/]+)";
-      
-      path = [path substringWithRange:range];
-      NSRange sr = [path rangeOfString:p
-                               options:NSRegularExpressionSearch];
-
-      if(sr.location != NSNotFound)
-      {
-        path = [path substringWithRange:sr];
-        p = @"(^/[^s]+/)";
-        sr = [path rangeOfString:p
-                         options:NSRegularExpressionSearch];
-        if(sr.location != NSNotFound)
-        {
-          *queryId = [path substringWithRange:NSMakeRange(sr.length + sr.location, path.length - sr.length)];
-        }
-      }
-    }
+    
     if(range.location != NSNotFound)
     {
+      *pattern = p;
+      
+      if([self dn_isDynamicPattern:p])
+      {
+        NSString *dynamicPart = [path substringWithRange:range];
+        
+        NSRange dr = [path rangeOfString:DN_REGEX_DYNAMIC_VALUE_SUFFIX
+                                 options:NSRegularExpressionSearch];
+        
+        if(dr.location != NSNotFound) *queryId = [dynamicPart substringWithRange:dr];
+        return range;
+      }
+      
       return range;
     }
   }
   return range;
 }
 
-- (NSDictionary *)queryItemsInPath:(NSString *)path
+- (NSDictionary *)queryItemsInPath:(NSString **)path
 {
   NSMutableDictionary *queryItems = [@{} mutableCopy];
-  NSMutableString *qp = [path mutableCopy];
-  NSRange range = [qp rangeOfString:@"?"];
-  if(range.location < 1 || range.location == NSNotFound) return nil;
-  [qp deleteCharactersInRange:NSMakeRange(0, range.location + 1)];
   
-  NSString *pattern = @"([^s][^=][^&]*)=([^s][^=][^&]*)";
-  while (qp.length > 0) {
-    NSRange r = [qp rangeOfString:pattern options:NSRegularExpressionSearch];
+  NSRange paramsRange = [*path rangeOfString:DN_REGEX_PARAMS_SUFFIX
+                                    options:NSRegularExpressionSearch];
+  
+
+  
+  if(paramsRange.location == NSNotFound) return nil;
+  
+  NSMutableString *mParams = [[*path substringWithRange:paramsRange] mutableCopy];
+  
+  NSMutableString *mPath = [*path mutableCopy];
+  [mPath deleteCharactersInRange:paramsRange];
+  *path = mPath;
+  
+  while (mParams.length > 0) {
+    NSRange r = [mParams rangeOfString:DN_REGEX_PARAMS_UNIT
+                               options:NSRegularExpressionSearch];
+    
     if(r.location != NSNotFound)
     {
-      NSString *matched = [qp substringWithRange:r];
+      NSString *matched = [mParams substringWithRange:r];
       NSArray *sliced = [matched componentsSeparatedByString:@"="];
       if(sliced.count == 2)
       {
@@ -295,14 +310,16 @@
         NSString *value = [self dn_trimDontCareCharacters:sliced[1]];
         queryItems[key] = value;
       }
-      [qp deleteCharactersInRange:r];
+      [mParams deleteCharactersInRange:NSMakeRange(r.location - 1, r.length + 1)];
     }
     else
     {
-      qp = [@"" mutableCopy];
+      mParams = [@"" mutableCopy];
     }
   }
+  
   if(queryItems.allKeys.count == 0) return nil;
+  
   return [queryItems copy];
 }
 

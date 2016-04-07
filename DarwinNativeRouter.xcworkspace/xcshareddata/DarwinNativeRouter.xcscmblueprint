@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "747A96CA1738AFE76E26D6F8D7B903722E4463A0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "747A96CA1738AFE76E26D6F8D7B903722E4463A0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B662031-685F-4AEC-97B3-18F2282502A2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "747A96CA1738AFE76E26D6F8D7B903722E4463A0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DarwinNativeRouter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DarwinNativeRouter.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/oenius\/DarwinNativeRouter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "747A96CA1738AFE76E26D6F8D7B903722E4463A0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/oenius\/DarwinNativeRouter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "747A96CA1738AFE76E26D6F8D7B903722E4463A0"
+    }
+  ]
+}

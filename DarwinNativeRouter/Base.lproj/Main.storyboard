@@ -16,7 +16,7 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tx4-y9-iK2"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YGv-yZ-kks"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuc-kN-IPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,14 +36,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-qJ-jBm">
-                                <rect key="frame" x="20" y="20" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="20" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CY-e7-W1v">
-                                <rect key="frame" x="0.0" y="40.5" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="41" width="600" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WVG-AB-UEK"/>
@@ -56,15 +56,7 @@
                                 <animations/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
-                                    <action selector="handleClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPa-S2-h6y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6am-XM-kKP">
-                                <rect key="frame" x="264" y="369" width="73" height="30"/>
-                                <animations/>
-                                <state key="normal" title="dispatcher"/>
-                                <connections>
-                                    <action selector="dispatcher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aep-Jk-foc"/>
+                                    <action selector="dispatcher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJy-PW-WJO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-dU-v6T">
@@ -72,7 +64,15 @@
                                 <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="present:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZl-Y1-VKF"/>
+                                    <action selector="present:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NzV-22-euO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6am-XM-kKP">
+                                <rect key="frame" x="264" y="369" width="73" height="30"/>
+                                <animations/>
+                                <state key="normal" title="dispatcher"/>
+                                <connections>
+                                    <action selector="dispatcher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIx-pR-Xit"/>
                                 </connections>
                             </button>
                         </subviews>
