@@ -18,7 +18,6 @@
 		1A2D979C1CAE50AB00F033B2 /* DNRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D97971CAE50AB00F033B2 /* DNRouter.m */; };
 		1A2D979D1CAE50AB00F033B2 /* DNRouterCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D97991CAE50AB00F033B2 /* DNRouterCenter.m */; };
 		1A2D979E1CAE50AC00F033B2 /* UIViewController+DNRouterExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D979B1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.m */; };
-		869E19F5B41DFA6F6355242F /* libPods-DarwinNativeRouter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinNativeRouter.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter.release.xcconfig"; sourceTree = "<group>"; };
 		1A0F1E8D1CA940C0003013D4 /* DarwinNativeRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinNativeRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0F1E911CA940C0003013D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A0F1E931CA940C0003013D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,8 +61,6 @@
 		1A2D97991CAE50AB00F033B2 /* DNRouterCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNRouterCenter.m; sourceTree = "<group>"; };
 		1A2D979A1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DNRouterExtra.h"; sourceTree = "<group>"; };
 		1A2D979B1CAE50AB00F033B2 /* UIViewController+DNRouterExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DNRouterExtra.m"; sourceTree = "<group>"; };
-		394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DarwinNativeRouter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinNativeRouter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				869E19F5B41DFA6F6355242F /* libPods-DarwinNativeRouter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,15 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AA5DE1D0E515EC1B09B6F8F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */,
-				0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		1A0F1E841CA940C0003013D4 = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +95,6 @@
 				1A0F1EA91CA940C0003013D4 /* DarwinNativeRouterTests */,
 				1A0F1EB41CA940C0003013D4 /* DarwinNativeRouterUITests */,
 				1A0F1E8E1CA940C0003013D4 /* Products */,
-				0AA5DE1D0E515EC1B09B6F8F /* Pods */,
-				A59ABBB76641CF4642AF1B61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,14 +165,6 @@
 			path = DarwinNativeRouter;
 			sourceTree = "<group>";
 		};
-		A59ABBB76641CF4642AF1B61 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				394F5920D28ACEAE317DEB20 /* libPods-DarwinNativeRouter.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,12 +172,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A0F1EBA1CA940C0003013D4 /* Build configuration list for PBXNativeTarget "DarwinNativeRouter" */;
 			buildPhases = (
-				6CD783E39408EA79FF2F3BA9 /* Check Pods Manifest.lock */,
 				1A0F1E891CA940C0003013D4 /* Sources */,
 				1A0F1E8A1CA940C0003013D4 /* Frameworks */,
 				1A0F1E8B1CA940C0003013D4 /* Resources */,
-				C04D1C24CE5F9A16E3E49A0D /* Embed Pods Frameworks */,
-				61857B2F38C00A97AF46F196 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,54 +289,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		61857B2F38C00A97AF46F196 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CD783E39408EA79FF2F3BA9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C04D1C24CE5F9A16E3E49A0D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DarwinNativeRouter/Pods-DarwinNativeRouter-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A0F1E891CA940C0003013D4 /* Sources */ = {
@@ -512,7 +437,6 @@
 		};
 		1A0F1EBB1CA940C0003013D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51022F390BF0AE00EB34AF62 /* Pods-DarwinNativeRouter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DarwinNativeRouter/Info.plist;
@@ -524,7 +448,6 @@
 		};
 		1A0F1EBC1CA940C0003013D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0307BD1A36D99AF71C10FD75 /* Pods-DarwinNativeRouter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DarwinNativeRouter/Info.plist;

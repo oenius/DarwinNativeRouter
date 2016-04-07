@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <DarwinNativeDispatcher.h>
 #import "DarwinNativeRouter.h"
 
 @interface AppDelegate ()
