@@ -18,44 +18,39 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
   
-  [DNRouter routerWithName:@"home" path:@"/home" controller:^__kindof UIViewController *{
+  //Do initialize the router
+  [self applicationLoadRouter];
+  
+  return YES;
+}
+
+- (void)applicationLoadRouter
+{
+  [DNRouter routerWithName:@"MAIN" path:@"/home" controller:^__kindof UIViewController *{
     UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
     controller.view.backgroundColor = [UIColor orangeColor];
     return controller;
   } action:^(__kindof UIViewController *controller) {
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [DNDispatcher dispatcher].defaultNavigationController.animation(YES).pushViewController(controller);
-    });
-    
+    [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:NO];
   }];
   
-  [DNRouter routerWithName:@"profile" path:@"/user/:id"
-      navigationController:(UINavigationController *)self.window.rootViewController
-                controller:^__kindof UIViewController *{
-                  
-                  UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
-                  controller.view.backgroundColor = [UIColor orangeColor];
-                  
+  [DNRouter routerWithName:@"PROFILE" path:@"/user/:id" controller:^__kindof UIViewController *{
+    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
+    controller.view.backgroundColor = [UIColor orangeColor];
     return controller;
-                  
   } action:^(__kindof UIViewController *controller) {
-    
-    [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:YES];
-    
+    [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:NO];
   }];
-
-  return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 {
-//  if([[DNRouter router]canOpen:url.absoluteString])
-//  {
-//    [[DNRouter router]open:url.absoluteString];
-//    return YES;
-//  }
+  if([[DNRouter router]canOpen:url.absoluteString])
+  {
+    [[DNRouter router]open:url.absoluteString];
+    return YES;
+  }
   return NO;
 }
 
