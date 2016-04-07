@@ -36,12 +36,22 @@
 
 }
 
-- (IBAction)dispatcher:(id)sender
+- (IBAction)nameAction:(id)sender
 {
-    [[DNRouter router]open:@"/user/10238372?lalal=88&sss=999&rr=11"];
+  [[DNRouter router]redirect:@"MAIN"];
 }
 
-- (IBAction)present:(id)sender
+- (IBAction)staticActionWithParams:(id)sender
+{
+  [[DNRouter router]open:@"/home/home/home"];
+}
+
+- (IBAction)dynaimcActionWithParams:(id)sender
+{
+  [[DNRouter router]open:@"/user/10238372?lalal=88&sss=999&rr=11"];
+}
+
+- (IBAction)mixActionWithParams:(id)sender
 {
   [[DNRouter router]open:@"/home/user/10238372"];
 }

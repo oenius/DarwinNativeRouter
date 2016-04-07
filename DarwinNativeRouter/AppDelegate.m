@@ -29,7 +29,6 @@
 {
   [DNRouter routerWithName:@"MAIN" path:@"/home" controller:^__kindof UIViewController *{
     UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
-    controller.view.backgroundColor = [UIColor orangeColor];
     return controller;
   } action:^(__kindof UIViewController *controller) {
     [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:NO];
@@ -37,7 +36,6 @@
   
   [DNRouter routerWithName:@"PROFILE" path:@"/user/:id" controller:^__kindof UIViewController *{
     UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"kMainBoard"];
-    controller.view.backgroundColor = [UIColor orangeColor];
     return controller;
   } action:^(__kindof UIViewController *controller) {
     [(UINavigationController *)self.window.rootViewController pushViewController:controller animated:NO];
